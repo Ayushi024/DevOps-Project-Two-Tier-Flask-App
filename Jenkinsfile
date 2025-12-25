@@ -9,26 +9,23 @@ pipeline {
     }
 
     stages {
-        stage('Clone repo') {
+
+        stage('Build Docker Image') {
             steps {
-                git branch: 'main',
-                    url: 'https://github.com/Ayushi024/DevOps-Project-Two-Tier-Flask-App.git'
+                sh '''
+                  echo "Workspace content:"
+                  ls -la
+                  docker build -t flask-app .
+                '''
             }
         }
 
-        stage('Build image') {
+        stage('Deploy with Docker Compose') {
             steps {
-                sh 'docker build -t flask-app .'
-            }
-        }
-
-        stage('Deploy with docker compose') {
-            steps {
-                // stop existing containers if running
-                sh 'docker compose down || true'
-
-                // start app with Jenkins-injected env vars
-                sh 'docker compose up -d --build'
+                sh '''
+                  docker-compose down || true
+                  docker-compose up -d --build
+                '''
             }
         }
     }
