@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayushi  | Cloud & DevOps Engineer 🚀</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(160deg, #0C0D16, #1A1C2B);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1100px;
+            width: 100%;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+        }
+
+        .profile-photo {
+            flex: 0 0 220px;
+            margin-right: 30px;
+        }
+
+        .profile-photo img {
+            width: 100%;
+            border-radius: 50%;
+            border: 3px solid #5599FF;
+            box-shadow: 0 4px 15px rgba(85, 153, 255, 0.5);
+        }
+
+        .content {
+            flex: 1;
+        }
+
+        .header h1 {
+            font-size: 2.1rem;
+            color: #5599FF;
+        }
+
+        .header p {
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+        }
+
+        .section h2 {
+            color: #5599FF;
+            margin-bottom: 8px;
+            font-size: 1.3rem;
+        }
+
+        .section p,
+        .section li {
+            font-size: 0.95rem;
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .messages {
+            margin-top: 15px;
+            padding: 12px;
+            background: rgba(85, 153, 255, 0.08);
+            border-radius: 12px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .messages p {
+            background: rgba(255, 255, 255, 0.07);
+            padding: 8px;
+            border-radius: 8px;
+            margin-bottom: 6px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        input[type="text"] {
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            border: 1px solid rgba(85, 153, 255, 0.3);
+        }
+
+        input[type="submit"] {
+            background: #5599FF;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        input[type="submit"]:hover {
+            background: #417ad6;
+        }
+
+        @media (max-width: 800px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .profile-photo {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Profile -->
+    <div class="profile-photo">
+        <img src="{{ url_for('static', filename='images/1.png') }}" alt="Ayushi Panwar">
+
+    </div>
+
+    <div class="content">
+
+        <!-- Header -->
+        <div class="header">
+            <h1>Ayushi Panwar</h1>
+            <p>Cloud & DevOps Engineer | AWS | Docker | Kubernetes</p>
+        </div>
+
+        <!-- About -->
+        <div class="section">
+            <h2>About Me</h2>
+            <p>
+                I am a <b>B.Tech Computer Science</b> student specializing in 
+                <b>Cloud Computing & Virtualization</b>, with strong hands-on experience 
+                in <b>AWS, DevOps, CI/CD pipelines, and containerized applications</b>.
+            </p>
+        </div>
+
+        <!-- Skills -->
+        <div class="section">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li><b>Cloud:</b> AWS (EC2, S3, IAM, VPC)</li>
+                <li><b>DevOps:</b> Docker, Jenkins, Kubernetes, SonarQube</li>
+                <li><b>Languages:</b> Python, SQL, Java (Basics)</li>
+                <li><b>Databases:</b> MySQL, SQL Server</li>
+                <li><b>Tools:</b> GitHub, Linux, VS Code</li>
+            </ul>
+        </div>
+
+        <!-- Experience -->
+        <div class="section">
+            <h2>Experience</h2>
+            <p><b>DevOps Engineer Trainee</b> — Infra (Oct 2023 – Present)</p>
+            <ul>
+                <li>Built CI/CD pipelines using Jenkins and GitHub</li>
+                <li>Containerized applications using Docker</li>
+                <li>Deployed scalable applications on Kubernetes</li>
+            </ul>
+
+            <p style="margin-top:10px;"><b>Data Engineer Intern</b> — Equipped Analytical Intelligence</p>
+            <ul>
+                <li>Data reconciliation and validation using Python & SQL</li>
+                <li>Created datasets for financial reporting</li>
+            </ul>
+        </div>
+
+        <!-- Projects -->
+        <div class="section">
+            <h2>Projects</h2>
+            <ul>
+                <li><b>Video-to-Audio Microservices</b> – AWS, Docker, Kubernetes</li>
+                <li><b>ProctorX AI</b> – AI-based exam proctoring system</li>
+                <li><b>ShopTrack</b> – Full-stack supermarket inventory system</li>
+            </ul>
+        </div>
+
+        <!-- Certifications -->
+        <div class="section">
+            <h2>Certifications</h2>
+            <ul>
+                <li>AWS Academy Cloud Web Application Builder</li>
+                <li>AWS Academy Cloud Architecting</li>
+                <li>Oracle Cloud Infrastructure Foundations</li>
+            </ul>
+        </div>
+
+        <!-- Messages -->
+        <div class="messages">
+            {% for message in messages %}
+                <p>{{ message[0] }}</p>
+            {% endfor %}
+        </div>
+
+        <form id="messageForm">
+            <input type="text" name="new_message" placeholder="Leave a message..." required>
+            <input type="submit" value="Send">
+        </form>
+
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $("#messageForm").submit(function(e) {
+        e.preventDefault();
+        let msg = $("input[name='new_message']").val().trim();
+        if (!msg) return;
+
+        $.post("/submit", { new_message: msg }, function(res) {
+            $(".messages").append("<p>" + res.message + "</p>");
+            $("input[name='new_message']").val("");
+        });
+    });
+</script>
+
+</body>
+</html>
